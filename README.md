@@ -24,12 +24,14 @@ CONSUMER_KEY=94110-... (from Pocket developer site)
 ## Project Structure
 
 * `get_access_token` — get Pocket API access token
+* `get_items.py` — fetches all saved item metadata from Pocket REST API in 500-item chunks
 
 ## Usage
 
 1. Populate `.env` with cookies and keys from your logged-in session
 2. Run `get_access_token.py` first to obtain your Pocket API access token.
    This script will guide you through the authorization process in your browser.
+3. Run `get_items.py` to download all saved item metadata
 
 ## Note
 
