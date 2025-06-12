@@ -28,10 +28,11 @@ CONSUMER_KEY=94110-... (from Pocket developer site)
 
 ## Usage
 
-1. Populate `.env` with cookies and keys from your logged-in session
+1. Populate `.env` with cookies and keys from your logged-in session.
 2. Run `get_access_token.py` first to obtain your Pocket API access token.
    This script will guide you through the authorization process in your browser.
-3. Run `get_items.py` to download all saved item metadata
+3. Run `get_items.py` to download all saved item metadata.
+4. Run `export_by_slug.py` to download all saved data.
 
 ## Note
 
