@@ -2,10 +2,40 @@
 
 This toolset allows you to export your entire saved Pocket article collection before the service shuts down.
 
+## Features
+
+* 🔐 Authenticated access using cookies and consumer key
+* 💾 All metadata from the Pocket API is stored
+* 📁 Article content is fetched via GraphQL and stored in deep nested directories by ID
+* 💥 Handles API rate limits (429), authorization failures (403), and transient errors (50x)
+* 🧠 Persistent progress tracking in JSON file (`progress.json`)
+
 ## Requirements
 
 * Python 3.11+
-* Environment variables (in `.env`)
+* Environment variables (in `.env`):
+
+```env
+POCKET_COOKIE="OptanonConsent=...; a_widget_t=..."
+AUTH_BEARER=eyJ0e... (JWT-like token)
+CONSUMER_KEY=94110-... (from Pocket developer site)
+```
+
+## Project Structure
+
+* `get_access_token` — get Pocket API access token
+
+## Usage
+
+1. Populate `.env` with cookies and keys from your logged-in session
+2. Run `get_access_token.py` first to obtain your Pocket API access token.
+   This script will guide you through the authorization process in your browser.
+
+## Note
+
+This tool relies on Pocket's internal GraphQL API and is meant for personal archival purposes only. It may break without notice if the Pocket infrastructure changes.
+
+---
 
 ## Disclaimer
 
